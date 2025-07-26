@@ -1,17 +1,16 @@
 const express = require("express")
-const { getAllNotes, createNote, updateNote, deleteNote } = require("../controllers/notesController.js")
+const { getAllNotes, createNote, updateNote, deleteNote, getNoteById } = require("../controllers/notesController.js")
 
 const router = express.Router()
 
 
 router.get("/", getAllNotes)
 
+router.get("/:id", getNoteById)
 
 router.post("/", createNote)
 
-
 router.put("/:id", updateNote)
-
 
 router.delete("/:id", deleteNote)
 
