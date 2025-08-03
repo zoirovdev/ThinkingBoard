@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { PenSquareIcon, Trash2Icon } from "lucide-react"
+import { PenSquare, Trash2 } from "lucide-react"
 import { formatDate } from "../lib/utils.js"
 import api from "../lib/axios.js"
 import toast from "react-hot-toast"
@@ -34,9 +34,9 @@ const NoteCard = ({note, setNotes}) => {
             {formatDate(new Date(note.createdAt))}
 	  </span>
 	  <div className="flex items-center gap-1">
-	    <PenSquareIcon className="size-4"/>
+	    <PenSquare className="size-4"/>
 	    <button className="btn btn-ghost btn-xs text-error" onClick={(e) => handleDelete(e, note._id)}>
-              <Trash2Icon className="size-4"/>
+              <Trash2 className="size-4"/>
 	    </button>
 	  </div>
 	</div>
