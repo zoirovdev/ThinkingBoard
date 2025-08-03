@@ -90,26 +90,26 @@ const NoteDetailPage = () => {
 
 	  <div className="card bg-base-100">
 	    <div className="card-body">
-	      <div className="form-control mb-4">
+	      <div className="form-control mb-4 flex flex-col gap-2">
 		<label className="label">
 		  <span className="label-text">Title</span>
 		</label>
 		<input 
                   type="text"
 		  placeholder="Note title"
-		  className="input input-bordered"
+		  className="input input-bordered w-[100%] h-12"
 		  value={note.title}
 		  onChange={(e) => setNote({ ...note, title: e.target.value })}
 		/>
 	      </div>
 
-	      <div className="form-control mb-4">
+	      <div className="form-control mb-4 flex flex-col gap-2">
 		<label className="label">
 		  <span className="label-text">Content</span>
 		</label>
 		<textarea 
 		  placeholder="Write your note here..."
-		  className="textarea textarea-bordered h-32"
+		  className="textarea textarea-bordered h-36 w-[100%]"
 		  value={note.content}
 		  onChange={(e) => setNote({ ...note, content: e.target.value })}
 		/>
